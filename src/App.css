@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+span{
+  width:0;
+  height:3px;
+  background-color: white;
+  display:inline-block;
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  transition:width 1s;
+}
+.home{
+   /* background: linear-gradient(#2b1055,#7597de); */
+}
+li{
+   position:relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li:hover span{
+   width:100%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.name span{
+    color:black;
+}
+
+h1{
+   color:white;
+}
+
+.mid{
+    height:70%;
+}
+.name>h1:nth-child(1){
+   font-size: 2rem;
+   font-weight: 600;
+}
+.name>h1:nth-child(2){
+   font-size: 3rem;
+   font-weight: 900;
+   width:0ch;
+   overflow: hidden;
+   white-space: nowrap;
+   animation:typing 3s steps(16) forwards, blink-caret 0.75s  infinite;
+   border-right: 2px solid;
+   border-right-width: 50%;
+   padding:0;
+}
+
+@keyframes typing{
+    from{
+       width:0ch;
+    }
+    to{
+       width:12ch;
+    }
+}
+
+@keyframes blink-caret {
+   from {
+      border-color: white;
   }
+  to{
+   border-color: transparent; 
+}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.second{
+   position: relative;
+   width: 100%;
+   height: 95vh;
+   padding: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   background-color: #7597de;
+   /* background: linear-gradient(30deg,#2b1055,#7597de); */
+}
+
+.second::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+.second img 
+{
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* .second img#moon
+{
+    mix-blend-mode: screen;
+    z-index:11;
+    top:50%;
+}
+.second img#mountains_front
+{
+    z-index: 10;
+} */
+
+.second img#moon {
+   top: 50px; /* Adjust the initial top position as needed */
+   mix-blend-mode: screen;
+   z-index: 11;
+ }
+ 
+ .second img#mountains_behind {
+   top: 200px; /* Adjust the initial top position as needed */
+   z-index: 9;
+ }
+ 
+ .second img#mountains_front {
+   top: 300px; /* Adjust the initial top position as needed */
+   z-index: 10;
+ }
+
+ #text{
+    /* position:absolute; */
+    top:400px;
+    z-index: 12;
+ }
+
+.third{
+   position: relative;
+   padding: 100px;
+   background: #1c0522;
+   height:100vh;
+}
+
+.flip{
+    height:300px;
+    flex-basis:400px;
+    margin-right:200px;
+}
+.container{
+   width:100%;
+   height:200px;
+   perspective: 500px;
+}
+
+.card{
+ height:100%;
+ width:100%;
+ position:relative;
+ transition: transform 1500ms; 
+ transform-style: preserve-3d;
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+}
+.front,.back{
+   position:absolute;
+   height:100%;
+   width:100%;
+   border-radius: 2rem;
+   backface-visibility: hidden;
+   
+ 
+}
+
+.front{
+background-repeat: no-repeat;
+/* background-image: url('./download.jpeg'); */
+}
+
+.back{
+  transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  color:white;
+   stroke: 1rem purple;
+   padding-right:10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.four{
+    background-image: url('./images/stars.png');
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner{
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   overflow: hidden;
+   position: relative;
+}
+.banner .slider{
+   position: absolute;
+   width: 150px;
+   height: 150px;
+   top: 10%;
+   left: calc(50% - 100px);
+   transform-style: preserve-3d;
+   transform: perspective(1000px);
+   animation: autoRun 20s linear infinite;
+   z-index: 2;
+}
+@keyframes autoRun{
+   from{
+       transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+   }to{
+       transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+   }
+}
+
+.banner .slider .item{
+   position: absolute;
+   inset:0 0 0 0;
+   transform: 
+       rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+       translateZ(550px);
+}
+.banner .slider .item img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.button{
+     width:55px;
+     height:20px;
+     background-color: rgb(251, 251, 251);
+     border-radius:50px;
+     position:relative;
+     left:-650px;
+}
+
+.button>span{
+     width:18px;
+     height:18px;
+     background-color: rgb(151, 151, 151);
+     border-radius:50%;
+     position: absolute;
+     top:1px;
+     transition:left 1s;
+     z-index:100;
+}
+
+.project1{
+    background:linear-gradient(30deg,rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.2));
+    top: 100%; 
+    transition: 0.7s linear;
+}
+
+.project:hover .project1{
+   top:0;
+}
+
+.projectMain{
+    background-color: #0C0C1D;
+}
+.contact{
+   background-color: #15152e;
 }
