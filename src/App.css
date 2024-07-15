@@ -265,3 +265,11 @@ background-repeat: no-repeat;
 .contact{
    background-color: #15152e;
 }
+
+/* @media  screen and (min-width:450px) {
+    .mid{
+       width:100%;
+       border-color: aliceblue;
+       flex-direction: column;
+    }
+} */

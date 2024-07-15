@@ -20,6 +20,8 @@ import github from "./images/GitHub.png"
 // import call from "./images/call1.jpg"
 import profile1 from "./images/profile2.png"
 import mgr from "./images/mgr.png"
+import pdf from "./projectimg/kabil-javaFullStack-Resume.pdf"
+
 function App() {
 const[quan,setquant]=useState(0);
 const[span1,setSpan1]=useState(0);
@@ -95,7 +97,7 @@ const quantChange=()=>{
           </div>
         </nav>
         
-        <div class="flex justify-around mid items-center gap-10">
+        <div class="flex justify-around mid items-center gap-10 ">
           <div class="name">
             <h1>I'm a  Developer</h1>
             <h1>Kabila kannan</h1>
@@ -203,13 +205,19 @@ const quantChange=()=>{
                border-4 transition duration-300 relative hover:bottom-3 hover:scale-150"></i> 
                <i class="fa-brands fa-twitter p-2  bg-purple-400 rounded-full text-white border-4 transition duration-300 relative hover:bottom-3 hover:scale-150"></i> 
                </div>
-               <button class='w-60 p-3 bg-purple-500 text-white rounded-full'>Download Cv</button>
+               <a href={pdf} download><button class='w-60 p-3 bg-purple-500 text-white rounded-full'> Download CV</button></a>
+               {/* <button
+  className='w-60 p-3 bg-purple-500 text-white rounded-full'
+  onClick={() => window.open(pdf)}
+> 
+  Download CV
+</button> */}
          </div>
          <div class='flex flex-col w-1/3 gap-8 '>
          <input type="text" class="h-10 p-5 bg-gray-300 text-black placeholder-gray-700 outline-none font-semibold" placeholder="Your Name "></input>
          <input type="text" class="outline-none h-10 p-5 bg-gray-300 placeholder-gray-700 text-black font-semibold" placeholder="Your Email"></input>
          <input type="tel" class='h-40 placeholder-gray-700  bg-gray-300 text-black outline-none ps-3 font-semibold' placeholder="Your Message "></input>
-         <button class='bg-purple-400 w-1/3 text-white p-2 rounded'>Submit</button>
+      <button class='bg-purple-400 w-1/3 text-white p-2 rounded'>Submit</button>
          </div>
     </section>
 
