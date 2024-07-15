@@ -176,9 +176,13 @@ const quantChange=()=>{
              <img class='w-full h-full' src={project2}/>
                   <div class='w-full flex justify-center items-center flex-col gap-10  h-full absolute  left-0 project1'>
                           <h1 class='text-2xl font-semibold'> E-commerce</h1>
+                          <div class='flex justify-between'>
                         <a href="https://github.com/Kabilakannan/E-commerce">
                            <img src={github} class='w-24 h-14' alt=" "/>
                         </a>
+                        <a href="https://main--kabilecommerce.netlify.app/" class='ms-10'>
+                        <p class='bg-black px-2 py-1 text-white'>Live Demo</p></a>
+                        </div>
                   </div>
              </div>
          </div>
