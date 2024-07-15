@@ -1,4 +1,4 @@
-import image from "./cover.png";
+// import image from "./cover.png";
 import "./App.css";
 import { useState, useEffect } from "react";
 import logo from "./download.jpeg";
@@ -16,8 +16,8 @@ import java from "./images/java.svg"
 import project1 from "./projectimg/project1.png"
 import project2 from "./projectimg/project2.png"
 import github from "./images/GitHub.png"
-import email from "./images/email.webp"
-import call from "./images/call1.jpg"
+// import email from "./images/email.webp"
+// import call from "./images/call1.jpg"
 import profile1 from "./images/profile2.png"
 import mgr from "./images/mgr.png"
 function App() {
@@ -29,7 +29,7 @@ const quantChange=()=>{
     if(prev===0)
     {
       setSpan1(57)
-     return 6
+     return 7
     }
       // setSpan1(78)
     else if(prev===6) {
@@ -73,7 +73,7 @@ const quantChange=()=>{
             <img
               src={logo}
               class="w-20 h-16 p-0 rounded-full"
-              
+              alt=" "
             /> 
           </div>
           <div class="basis-1/2">
@@ -101,16 +101,16 @@ const quantChange=()=>{
             <h1>Kabila kannan</h1>
           </div>
           <div class='w-1/2'>
-               <img src={profile1} class='w-2/4 h-2/4 rounded-xl ms-72'/>
+               <img src={profile1} class='w-2/4 h-2/4 rounded-xl ms-72' alt=" "/>
           </div>
         </div>
       </div>
       <div className="second">
-        <img src={moon} id="moon" />
-        <img src={mountains1} id="mountains_behind" />
+        <img src={moon} id="moon" alt=" "/>
+        <img src={mountains1} id="mountains_behind" alt=" "/>
         <h2 id="text" class='py-3 px-8 bg-purple-700 rounded-full text-white'>Scroll Down</h2>
-        <img src={mountains2} id="mountains_front" />
-        <img src={star} id="star" />
+        <img src={mountains2} id="mountains_front" alt=" "/>
+        <img src={star} id="star" alt=" "/>
       </div>
       <div className="third flex items-center justify-center" id="about">
         <div>
@@ -131,7 +131,7 @@ const quantChange=()=>{
               <p class='text-center'>Master in Computer<br></br>science</p>
               </div>
               <div className="back bg-white">
-                 <img src={mgr} />
+                 <img src={mgr} alt=" "/>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ const quantChange=()=>{
          <h1 class='text-6xl text-white font-bold text-center'>Projects</h1>
          <div class='flex justify-around h-1/2 m-32  gap-2'>
              <div class='w-1/3 bg-white h-5/6 relative overflow-hidden z-10 project rounded-xl' >
-             <img class='w-full h-full' src={project1}/>
+             <img class='w-full h-full' src={project1} alt=""/>
                   <div class='w-full flex justify-center flex-col gap-10 items-center h-full absolute  left-0 project1'>
                        <h1 class='text-2xl font-semibold'> Bank Application</h1>
                         <a href="https://github.com/Kabilakannan/Bank-Applications">
@@ -177,7 +177,7 @@ const quantChange=()=>{
                   <div class='w-full flex justify-center items-center flex-col gap-10  h-full absolute  left-0 project1'>
                           <h1 class='text-2xl font-semibold'> E-commerce</h1>
                         <a href="https://github.com/Kabilakannan/E-commerce">
-                           <img src={github} class='w-24 h-14'/>
+                           <img src={github} class='w-24 h-14' alt=" "/>
                         </a>
                   </div>
              </div>
