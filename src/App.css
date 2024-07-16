@@ -137,13 +137,13 @@ h1{
 }
 
 .flip{
-    height:300px;
-    flex-basis:400px;
-    margin-right:200px;
+    height:400px;
+    flex-basis:600px;
+    /* margin-right:200px; */
 }
 .container{
    width:100%;
-   height:200px;
+   height:300px;
    perspective: 500px;
 }
 
@@ -363,7 +363,7 @@ background-repeat: no-repeat;
        height:100%;
        justify-content: center;
        align-items: center;
-      margin-right:0;
+       margin-right:0;
    }
 
    .container{
@@ -374,4 +374,26 @@ background-repeat: no-repeat;
    .front{
        gap:5px;
    }
+}
+
+@media (max-width:719px){
+   .container{
+      width:70%;
+      height:70%;
+  }
+
+ 
+}
+
+
+@media (max-width:418px){
+   .contact-block{
+      width:100%;
+      /* align-items: center; */
+      margin-left:15%;
+  }
+
+  .front{
+   font-size: 12px;
+}
 }
