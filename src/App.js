@@ -20,7 +20,7 @@ import project2 from "./projectimg/project2.png";
 import github from "./images/GitHub.png";
 // import email from "./images/email.webp"
 // import call from "./images/call1.jpg"
-import profile1 from "./images/profile2.png";
+import profile1 from "./images/profil3.png";
 import mgr from "./images/mgr.png";
 import pdf from "./projectimg/kabil-javaFullStack-Resume.pdf";
 
@@ -106,7 +106,7 @@ function App() {
 
   return (
     <>
-      {/* <div class="bg-black h-lvh home w-full">
+      <div class="bg-black h-lvh home w-full">
       <nav class="flex justify-between px-10 py-6 items-center gap-10">
           <div class="mx-5">
             <img src={logo} class="w-20 h-16 p-0 rounded-full" alt=" " />
@@ -142,7 +142,10 @@ function App() {
           </div>
         </div>
         
-      </div> */}
+      </div>
+      {/* <section class='h-dvh home bg-black'>
+         
+      </section> */}
       <div className="second">
         <img src={moon} id="moon" alt=" " />
         <img src={mountains1} id="mountains_behind" alt=" " />
