@@ -130,7 +130,7 @@ h1{
  }
 
 .third{
-   /* position: relative; */
+   position: relative;
    padding: 100px;
    background: #1c0522;
    height:100vh;  
@@ -400,6 +400,26 @@ background-repeat: no-repeat;
    width:75%;
    height:40%;
 }
+}
+
+@media (max-width:435px){
+   .contact-block{
+      width:100%;
+      /* align-items: center; */
+      margin-left:15%;
+  }
+
+  /* .front{
+   font-size: 10px;
+} */
+
+   .third{
+       padding:50px;
+   }
+
+
+
+
 }
 
 .reveal{
