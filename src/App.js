@@ -41,6 +41,9 @@ function App() {
     });
   };
   useEffect(() => {
+    
+    
+
     const stars = document.getElementById("star");
     const moon = document.getElementById("moon");
     const mountains_behind = document.getElementById("mountains_behind");
@@ -67,6 +70,20 @@ function App() {
           mountains_front.style.top = value * 0.5 + "px";
           tex.style.left = value * 0.5 + "px";
         }
+
+        var reveal=document.querySelectorAll('.reveal');
+
+        for(var i=0;i<reveal.length;i++){
+            var windowHeight=window.innerHeight;
+            var revealTop=reveal[i].getBoundingClientRect().top;
+            var revealPoint=150;
+
+            if(revealTop < windowHeight -revealPoint)
+            reveal[i].classList.add('active')
+            else  
+               reveal[i].classList.remove('active')
+        }
+        
       });
     }
     if ($(".home").ripples) {
@@ -135,7 +152,8 @@ function App() {
         <img src={mountains2} id="mountains_front" alt=" " />
         <img src={star} id="star" alt=" " />
       </div>
-      <div className="third flex items-center justify-center" id="about">
+      <div className="third" id="about">
+        <div className="flex items-center justify-center reveal h-full third-items">
         <div className='content'>
           <h1 class="font-bold  text-4xl">About Me</h1>
           <p class="text-white  w-1/2  py-10  text-xl">
@@ -161,9 +179,10 @@ function App() {
             </div>
           </div>
         </div>
+        </div>
       </div>
 
-      <div class="four flex flex-col  bg-black  ">
+      <div class="four reveal flex flex-col  bg-black  ">
         <h1 class="text-black my-10 font-semibold text-8xl self-center skill">Skills</h1>
         <div class="button bg-black  self-start ms-5">
           <span onClick={quantChange} style={{ left: `${span1}%` }}></span>
@@ -199,7 +218,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="projectMain  h-dvh py-10" >
+      <div class="projectMain h-dvh py-10" >
+        <div class='reveal h-dvh'>
         <h1 class="text-6xl text-white font-bold text-center">Projects</h1>
         <div class="flex justify-around h-5/6 items-center gap-2 project-sub">
           <div class="w-1/3 bg-white h-1/2 relative overflow-hidden z-10 project rounded-xl">
@@ -230,10 +250,12 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
       <section
-        class="contact flex w-full h-dvh bg-black justify-evenly items-center"
-        id="contact"
+         class='h-dvh contact-section'
       >
+        <div class="contact reveal flex w-full h-dvh bg-black justify-evenly items-center"
+        id="contact">
         <div class="flex flex-col w-1/2 gap-10  contact-block">
           <h1 class="text-5xl font-semibold my-10">Contact Me</h1>
           <div class="text-white p-0">
@@ -293,6 +315,7 @@ function App() {
             Submit
           </button>
         </div>
+         </div>
       </section>
     </>
   );
