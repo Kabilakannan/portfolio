@@ -20,7 +20,7 @@ import project2 from "./projectimg/project2.png";
 import github from "./images/GitHub.png";
 // import email from "./images/email.webp"
 // import call from "./images/call1.jpg"
-import profile1 from "./images/profil3.png";
+import profile1 from "./images/progamming.gif"
 import mgr from "./images/mgr.png";
 import pdf from "./projectimg/kabil-javaFullStack-Resume.pdf";
 
@@ -57,10 +57,10 @@ function App() {
     let list = document.querySelector('ul');
     setMenuOpen(!menuOpen);
     if (!menuOpen) {
-      list.classList.add('top-[70px]');
+      list.classList.add('top-[60px]');
       list.classList.add('opacity-100');
     } else {
-      list.classList.remove('top-[70px]');
+      list.classList.remove('top-[60px]');
       list.classList.remove('opacity-100');
     }
   };
@@ -167,9 +167,9 @@ function App() {
       {/* <section class='h-dvh home bg-black'>
          
       </section> */}
-      <div class='bg-black   h-lvh  '>
-        <nav class='md:flex md:justify-between p-5 text-cyan-500 bg-white '>
-        <div class='text-2xl text-cyan-500 flex justify-between items-center'>
+      <div class='bg-black h-screen grid grid-rows-[auto,1fr]  m-0'>
+        <nav class='md:flex md:justify-between md:p-5 p-1 text-cyan-500 bg-white '>
+        <div class='text-2xl text-cyan-500 flex justify-between items-center h-16'>
            <h1 class='text-cyan-500'>Portfolio</h1>
            <div class="mx-2 md:hidden block">
               {/* <i class="fa-solid fa-bars" name="menu" onClick={(e)=>menu(e.target)}></i>
@@ -200,6 +200,25 @@ function App() {
               </li>
             </ul>
             </nav>
+          <div class="flex md:flex-row flex-col md:justify-around justify-center mid items-center gap-14 md:gap-10  ">
+          <div class="name">
+            <h1><h1 class=' text-6xl span-gradient inline'>I'm </h1>a  Developer</h1>
+            <h1 className='gradient'>Kabila kannan</h1>
+          </div>
+          <div class='img-item flex justify-center md:h-2/4'>
+               <img src={profile1} class='md:w-full md:h-full w-2/3 rounded-xl ' alt=" "/>
+          </div>
+        </div>
+         {/* <div class="flex md:flex-row flex-col justify-center items-center gap-10 p-10">
+        <div class="name">
+            <h1 class="text-purple-900 inline text-6xl font-bold">I'm</h1>
+            <h1 class="text-6xl font-bold">a Developer</h1>
+            <h2 class="text-4xl font-medium">Kabila Kannan</h2>
+        </div>
+        <div class="img-item flex justify-center h-3/4">
+            <img src={profile1} class="w-full h-full rounded-xl" alt="Profile Picture"/>
+        </div> */}
+    {/* </div> */}
       </div>
      
       <div className="second">
@@ -258,10 +277,10 @@ function App() {
               <img src={html} alt="" />
             </div>
             <div class="item" style={{ "--position": 4 }}>
-              <img src={css} alt="" />
+              <img src={css} class='bg-white' alt="" />
             </div>
             <div class="item" style={{ "--position": 5 }}>
-              <img src={js} alt="" />
+              <img class='bg-white'src={js} alt="" />
             </div>
             <div class="item" style={{ "--position": 6 }}>
               <img src={mysql} alt="" />
@@ -277,7 +296,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="projectMain h-dvh py-10" >
+      <div class="projectMain h-dvh py-10" id="project">
         <div class='reveal h-dvh'>
         <h1 class="text-6xl text-white font-bold text-center">Projects</h1>
         <div class="flex justify-around h-5/6 items-center gap-2 project-sub">
