@@ -27,6 +27,7 @@ import pdf from "./projectimg/kabil-javaFullStack-Resume.pdf";
 function App() {
   const [quan, setquant] = useState(0);
   const [span1, setSpan1] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const quantChange = () => {
     setquant((prev) => {
       if (prev === 0) {
@@ -40,10 +41,30 @@ function App() {
       }
     });
   };
+  // const menu=(e)=>{
+  //   let list=document.querySelector('ul');
+  //   if (e.name === 'menu') {
+  //     e.name = 'close';
+  //     list.classList.add('top-[70px]');
+  //     list.classList.add('opacity-100');
+  //   } else {
+  //     e.name = 'menu';
+  //     list.classList.remove('top-[70px]');
+  //     list.classList.remove('opacity-100');
+  //   }
+  // }
+  const toggleMenu = () => {
+    let list = document.querySelector('ul');
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      list.classList.add('top-[70px]');
+      list.classList.add('opacity-100');
+    } else {
+      list.classList.remove('top-[70px]');
+      list.classList.remove('opacity-100');
+    }
+  };
   useEffect(() => {
-    
-    
-
     const stars = document.getElementById("star");
     const moon = document.getElementById("moon");
     const mountains_behind = document.getElementById("mountains_behind");
@@ -106,7 +127,7 @@ function App() {
 
   return (
     <>
-      <div class="bg-black h-lvh home w-full">
+      {/* <div class="bg-black h-lvh home w-full">
       <nav class="flex justify-between px-10 py-6 items-center gap-10">
           <div class="mx-5">
             <img src={logo} class="w-20 h-16 p-0 rounded-full" alt=" " />
@@ -142,10 +163,45 @@ function App() {
           </div>
         </div>
         
-      </div>
+      </div> */}
       {/* <section class='h-dvh home bg-black'>
          
       </section> */}
+      <div class='bg-black   h-lvh  '>
+        <nav class='md:flex md:justify-between p-5 text-cyan-500 bg-white '>
+        <div class='text-2xl text-cyan-500 flex justify-between items-center'>
+           <h1 class='text-cyan-500'>Portfolio</h1>
+           <div class="mx-2 md:hidden block">
+              {/* <i class="fa-solid fa-bars" name="menu" onClick={(e)=>menu(e.target)}></i>
+              <i class="fa-solid fa-xmark" name="menu" onClick={(e)=>menu(e.target)}></i> */}
+              {menuOpen ? (
+                <i className="fa-solid fa-xmark" onClick={toggleMenu}></i>
+              ) : (
+                <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
+              )}
+           </div>
+        </div>
+      <ul class="text-cyan-500 md:flex md:items-center font-medium text-xl md:me-6
+      md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+              <li class="mx-4 my-7 md:my-0">
+                Home<span></span>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                <a href="#about">About</a>
+                <span></span>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                <a href="#project">Projects</a>
+                <span></span>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                <a href="#contact">Contacts</a>
+                <span></span>
+              </li>
+            </ul>
+            </nav>
+      </div>
+     
       <div className="second">
         <img src={moon} id="moon" alt=" " />
         <img src={mountains1} id="mountains_behind" alt=" " />
