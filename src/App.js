@@ -168,7 +168,7 @@ function App() {
          
       </section> */}
       <div class='bg-black h-screen grid grid-rows-[auto,1fr]  m-0'>
-        <nav class='md:flex md:justify-between md:p-5 p-1 text-cyan-500 bg-white '>
+        <nav class='md:flex md:justify-between md:p-2 p-1 text-cyan-500 bg-gray-300 '>
         <div class='text-2xl text-cyan-500 flex justify-between items-center h-16'>
            <h1 class='text-cyan-500'>Portfolio</h1>
            <div class="mx-2 md:hidden block">
@@ -182,7 +182,7 @@ function App() {
            </div>
         </div>
       <ul class="text-cyan-500 md:flex md:items-center font-medium text-xl md:me-6
-      md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      md:z-auto md:static absolute bg-gray-300 w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
               <li class="mx-4 my-7 md:my-0">
                 Home<span></span>
               </li>
@@ -300,7 +300,7 @@ function App() {
         <div class='reveal h-dvh'>
         <h1 class="text-6xl text-white font-bold text-center">Projects</h1>
         <div class="flex justify-around h-5/6 items-center gap-2 project-sub">
-          <div class="w-1/3 bg-white h-1/2 relative overflow-hidden z-10 project rounded-xl">
+          <div class="w-1/3 h-1/2 bg-white  relative overflow-hidden z-10 project rounded-xl">
             <img class="w-full h-full" src={project1} alt="" />
             <div class="w-full flex justify-center flex-col gap-10 items-center h-full absolute  left-0 project1">
               <h1 class="text-2xl font-semibold"> Bank Application</h1>
