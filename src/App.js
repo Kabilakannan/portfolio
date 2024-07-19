@@ -107,7 +107,7 @@ function App() {
          
       </section> */}
       <div class='bg-black h-screen grid grid-rows-[auto,1fr]  m-0'>
-        <nav class='md:flex md:justify-between md:p-2 p-1 text-cyan-500  bg-gray-300 nav-bar'>
+        <nav class='md:flex md:justify-between md:p-2 p-1 text-cyan-500  bg-gray-300 nav-bar z-50'>
         <div class='text-2xl text-cyan-500 flex justify-between items-center h-16 '>
            <h1 class='text-cyan-500'>Portfolio</h1>
            <div class="mx-2 md:hidden block">
@@ -121,7 +121,7 @@ function App() {
            </div>
         </div>
       <ul class="text-cyan-500 md:flex md:items-center font-medium text-xl md:me-6
-      md:z-auto md:static absolute bg-gray-300 w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 z-50">
+      md:z-auto md:static absolute bg-gray-300 w-full  left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ul-element">
               <li class="mx-4 my-7 md:my-0">
                 Home<span></span>
               </li>
