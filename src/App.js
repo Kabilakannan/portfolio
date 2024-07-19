@@ -41,18 +41,7 @@ function App() {
       }
     });
   };
-  // const menu=(e)=>{
-  //   let list=document.querySelector('ul');
-  //   if (e.name === 'menu') {
-  //     e.name = 'close';
-  //     list.classList.add('top-[70px]');
-  //     list.classList.add('opacity-100');
-  //   } else {
-  //     e.name = 'menu';
-  //     list.classList.remove('top-[70px]');
-  //     list.classList.remove('opacity-100');
-  //   }
-  // }
+
   const toggleMenu = () => {
     let list = document.querySelector('ul');
     setMenuOpen(!menuOpen);
@@ -100,76 +89,26 @@ function App() {
             var revealPoint=150;
 
             if(revealTop < windowHeight -revealPoint)
-            reveal[i].classList.add('active')
-            else  
+               reveal[i].classList.add('active')
+             else  
                reveal[i].classList.remove('active')
         }
         
       });
     }
-    if ($(".home").ripples) {
-      $(".home").ripples({
-        resolution: 512,
-        dropRadius: 20, // px
-        perturbance: 0.04,
-      });
-    } else {
-      console.error("Ripples plugin is not loaded");
-    }
-
-    // Clean up the ripple effect when the component unmounts
-    return () => {
-      if ($(".home").ripples) {
-        $(".home").ripples("destroy");
-      }
-    };
+   
+  
   }, [quan]);
 
   return (
     <>
-      {/* <div class="bg-black h-lvh home w-full">
-      <nav class="flex justify-between px-10 py-6 items-center gap-10">
-          <div class="mx-5">
-            <img src={logo} class="w-20 h-16 p-0 rounded-full" alt=" " />
-          </div>
-          <div class="basis-1/2">
-            <ul class="text-blue-50 flex justify-evenly font-medium">
-              <li>
-                Home<span></span>
-              </li>
-              <li>
-                <a href="#about">About</a>
-                <span></span>
-              </li>
-              <li>
-                <a href="#project">Projects</a>
-                <span></span>
-              </li>
-              <li>
-                <a href="#contact">Contacts</a>
-                <span></span>
-              </li>
-            </ul>
-          </div>
-        </nav> 
-        
-        <div class="flex justify-around mid items-center gap-10 h-auto ">
-          <div class="name">
-            <h1>I'm a  Developer</h1>
-            <h1>Kabila kannan</h1>
-          </div>
-          <div class='img-item flex justify-center h-3/4'>
-               <img src={profile1} class='w-full h-full rounded-xl ' alt=" "/>
-          </div>
-        </div>
-        
-      </div> */}
+      
       {/* <section class='h-dvh home bg-black'>
          
       </section> */}
       <div class='bg-black h-screen grid grid-rows-[auto,1fr]  m-0'>
-        <nav class='md:flex md:justify-between md:p-2 p-1 text-cyan-500 bg-gray-300 '>
-        <div class='text-2xl text-cyan-500 flex justify-between items-center h-16'>
+        <nav class='md:flex md:justify-between md:p-2 p-1 text-cyan-500  bg-gray-300 nav-bar'>
+        <div class='text-2xl text-cyan-500 flex justify-between items-center h-16 '>
            <h1 class='text-cyan-500'>Portfolio</h1>
            <div class="mx-2 md:hidden block">
               {/* <i class="fa-solid fa-bars" name="menu" onClick={(e)=>menu(e.target)}></i>
@@ -182,7 +121,7 @@ function App() {
            </div>
         </div>
       <ul class="text-cyan-500 md:flex md:items-center font-medium text-xl md:me-6
-      md:z-auto md:static absolute bg-gray-300 w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      md:z-auto md:static absolute bg-gray-300 w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 z-50">
               <li class="mx-4 my-7 md:my-0">
                 Home<span></span>
               </li>
@@ -205,7 +144,7 @@ function App() {
             <h1><h1 class=' text-6xl span-gradient inline'>I'm </h1>a  Developer</h1>
             <h1 className='gradient'>Kabila kannan</h1>
           </div>
-          <div class='img-item flex justify-center md:h-2/4'>
+          <div class='img-item flex justify-center md:h-2/4 '>
                <img src={profile1} class='md:w-full md:h-full w-2/3 rounded-xl ' alt=" "/>
           </div>
         </div>
@@ -260,7 +199,8 @@ function App() {
         </div>
       </div>
 
-      <div class="four reveal flex flex-col  bg-black  ">
+      <div class="four   bg-black  ">
+        <div class="reveal flex flex-col">
         <h1 class="text-black my-10 font-semibold text-8xl self-center skill">Skills</h1>
         <div class="button bg-black  self-start ms-5">
           <span onClick={quantChange} style={{ left: `${span1}%` }}></span>
@@ -294,6 +234,7 @@ function App() {
             <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt=""></div>
             <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div> */}
           </div>
+        </div>
         </div>
       </div>
       <div class="projectMain h-dvh py-10" id="project">
@@ -366,12 +307,6 @@ function App() {
               Download CV
             </button>
           </a>
-          {/* <button
-  className='w-60 p-3 bg-purple-500 text-white rounded-full'
-  onClick={() => window.open(pdf)}
-> 
-  Download CV
-</button> */}
         </div>
         <div class="flex flex-col w-1/3 gap-8 message">
           <input
